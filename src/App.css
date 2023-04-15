@@ -1,38 +1,1111 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+body {
+  box-sizing: border-box;
+  overflow: auto;
+  height: 100%;
+  font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+.navbar {
+  position: fixed !important;
+  top: -60px;
+  left: 0;
+  width: 100% !important;
+  z-index: 10000 !important;
+  transition: all 100ms ease-in-out;
+  height: 60px;
+}
+.navbar>.container {
+  justify-content: space-around !important;
+}
+
+.nav-line {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-line a:hover {
+  color: #757575 !important;
+}
+.product-list-area {
+  display: flex;
+  justify-content: center;
+}
+.product-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  align-items: center;
+  height: 60px;
+}
+
+.product-list li {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.shoppingMenu {
+  text-transform: capitalize;
+}
+
+.shoppingMenu:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+/* search-area */
+.hidden-nav {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 312px;
+  margin-top: 60px;
+  transform: translateY(-372px);
+  /* transform: translateY(0); */
+}
+.popular-keyword {
+  display: none;
+  max-width: 656px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding-left: 0;
+}
+.popular-keyword p {
+  font-weight: 600;
+  color: #757575;
+}
+.popular-keyword li {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.popular-keyword li:hover {
+  color: #757575;
+  cursor: pointer;
+}
+.nav-right-area {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+.search-area {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+.search-input-area {
+  position: relative;
+}
+.search-input {
+  background: #f5f5f5;
+  width: 180px;
+  padding: 8px 48px;
+  height: 40px;
+  border-radius: 100px;
+  outline: 0;
+  border: 0;
+  transition: width 0.1s ease;
+}
+.search-input:hover {
+  background: #e5e5e5;
+}
+.search-btn {
+  position: absolute;
+  padding: 6px 8px;
+  top: 2px;
+  left: 2px;
+  background: transparent;
+}
+.search-clear-btn {
+  position: absolute;
+  padding: 6px 8px;
+  top: 2px;
+  right: 2px;
+  background: transparent;
+  transform: rotate(45deg);
+  visibility: visible;
+}
+.search-btn:hover {
+  background: #e5e5e5;
+  border-radius: 50%;
+}
+.search-clear-btn:hover {
+  background: #e5e5e5;
+  border-radius: 50%;
+}
+.large-search {
+  transform: translateX(0) translateX(-50vw) translateX(600px);
+}
+.search-cancel-btn-area button {
+  padding: 20px;
+  background: transparent;
+  font-weight: 600;
+}
+.search-cancel-btn-area:hover button {
+  color: #757575;
+  /* background: #e5e5e5; */
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner-description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 84px 0;
+  align-items: center;
+}
+
+.banner-description h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.banner-p {
+  margin: 24px 0;
+}
+
+.banner-btn {
+  /* width: 100px; */
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.banner-btn:hover {
+  background-color: #757575;
+}
+
+.card {
+  padding: 10px;
+  border: none !important;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.item-content {
+  color: #757575;
+}
+
+/* 디테일페이지 제품 설명 area */
+.detail-right-area {
+  margin-top: 10px !important;
+}
+
+.detail-img-area {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.detail-img-area img {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.detail-title {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.detatail-content {
+  font-weight: bold;
+}
+
+.eco-true-text {
+  color: #fa5400;
+  font-weight: 600;
+}
+
+.eco-true-description {
+  padding: 24px;
+  margin: 36px 0;
+  background: rgb(245, 245, 245);
+}
+
+.detail-description {
+  padding-top: 24px;
+}
+
+/* size */
+.size {
+  margin-top: 50px;
+}
+
+.size-title {
+  font-weight: bold;
+}
+
+.size-btn-area {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+}
+
+.size-warning {
+  border: 2px solid tomato;
+  border-radius: 8px;
+}
+
+.size-warning-text {
+  color: tomato;
+  margin-top: 20px;
+}
+
+.size-btn {
+  height: 48px;
+  outline: none;
+  background: #fff;
+  border: 2px solid #c3c3c3;
+  border-radius: 5px;
+}
+
+.size-btn:hover {
+  border: 2px solid black;
+}
+
+.size-btn:active {
+  border: 3px solid black;
+}
+
+.size-choosed {
+  background-color: #c3c3c3;
+}
+
+/* 장바구니 버튼 */
+.cart-btn {
+  margin-top: 10px;
+}
+
+.cart-btn button {
+  background: rgb(17, 17, 17);
+  width: 100%;
+  color: whitesmoke;
+  min-height: 60px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.2s ease 0s;
+}
+
+.cart-btn:hover button {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.suggest-area {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.react-multi-carousel-list {
+  padding: 0 !important;
+}
+
+/* detail page tab */
+.detailPage-tab-description {
+  padding: 3rem;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+/* navbar visible */
+.show-navbar {
+  top: 0px !important;
+  transition: opacity 0.1s ease-in !important;
+}
+
+.hidden-navbar {
+  top: -60px !important;
+}
+.nav-link {
+  color: #757575 !important;
+}
+
+.active {
+  color: #000 !important;
+}
+
+/* fade start end */
+.fadeStart {
+  opacity: 0;
+}
+
+.fadeEnd {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+/* tab CSS */
+.tabOption-title {
+  font-weight: bold;
+}
+
+.tabOption-description {
+  font-weight: bold;
+}
+
+.tabOption-grey-title {
+  color: #351b1b;
+  font-weight: bold;
+}
+
+/* 카트페이지 = 장바구니 페이지 */
+.cart-main-container {
+  margin-top: 100px;
+}
+
+/* men page */
+.men-page-main-div {
+  margin-top: 70px;
+}
+
+/* sub menu */
+.subMenubar {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 250px;
+  top: 60px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-start; 로 높이를 맞춰줌 ^^ */
+  align-items: flex-start;
+  z-index: 10;
+  /* visibility: visible; */
+}
+
+.subMenu-area {
+  padding-left: 0;
+  margin-bottom: 0;
+  padding: 30px;
+  display: block;
+}
+
+.subMenu-area li {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.subMenu-area li:hover {
+  color: #000;
+}
+
+.subMenu-list {
+  cursor: pointer;
+}
+
+.headline-featured-shoes h3 {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+/*  banner slide  */
+.each-slide {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.each-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trending-now-title {
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.trending-now-area {
+  display: flex;
+}
+
+.trending-relative {
+  position: relative;
+}
+
+.trending-absolute {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.trending-absolute h5 {
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.trending-btn {
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.trending-btn:hover {
+  background-color: #c3c3c3;
+}
+
+/* product-all-menu-container */
+.product-all-menu-container {
+  display: flex;
+  justify-content: space-around;
+  height: 270px;
+  overflow: hidden;
+  margin-bottom: 56px;
+}
+
+.product-all-menu-area {
+  margin-top: 80px;
+}
+
+.product-all-menu-area ul {
+  padding-left: 0;
+  color: #c3c3c3;
+}
+
+.product-all-menu-list {
+  cursor: pointer;
+  font-weight: 600;
+}
+.product-all-menu-list:hover {
+  color: #000;
+}
+
+.product-all-menu-area ul li {
+  padding: 5px;
+}
+
+.product-all-menu-title {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  width: 100%;
+  height: 270px;
+  background-color: #000;
+}
+
+/* product All 상품전체페이지 */
+.product-all-container {
+  margin-top: 60px;
+}
+
+/* product All navbar */
+.productAllNavbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  height: 60px;
+  /* 네비게이션 바의 높이 */
+  margin-bottom: 10px;
+}
+
+.sticky-top {
+  background-color: #fff;
+  position: sticky;
+  z-index: 1020;
+}
+
+.proudct-all-page-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productAllNavbar-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.productAllNavbar-btn-area {
+  display: flex;
+}
+
+.productAllNavbar-filter-btn {
+  margin-right: 20px;
+}
+
+/* 드롭다운 버튼 스타일 */
+.dropbtn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* 드롭다운 내용 스타일 */
+.dropdown-content {
+  opacity: 0;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background-color: #fff;
+  min-width: 130px;
+  border-radius: 0 0 0 20px;
+  padding-left: 0;
+}
+
+/* 마우스를 올리면 드롭다운 내용 보이도록 함 */
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+/* 각 드롭다운 항목 스타일 */
+.dropdown-content li {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  padding: 10px;
+}
+
+/* 마우스를 올리면 각 드롭다운 항목 스타일 변경 */
+.dropdown-content li a:hover {
+  color: #757575 !important;
+}
+.rotate {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(180deg);
+}
+.rotate-back {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0);
+}
+/* 상품디테일페이지 */
+.mainContainer {
+  margin-top: 70px;
+}
+.productDetailImage {
+  cursor: not-allowed !important;
+}
+/* 장바구니 페이지 */
+.cart-page-container {
+  padding: 0 100px !important;
+  padding-top: 40px !important;
+}
+.cart-title {
+  margin-bottom: 0;
+}
+.cart-no-result {
+  margin-top: 20px;
+}
+.cart-product-main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 24px 0;
+}
+.cart-product-container {
+  display: flex;
+}
+.cart-product-image-area img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.cart-product-description-area {
+  width: 100%;
+  padding-left: 16px;
+  font-size: 16px;
+}
+.cart-title-price {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-content {
+  color: #757575;
+  padding: 5px 0;
+}
+.cart-size {
+  margin-bottom: 20px;
+  display: flex;
+}
+.cart-delete-btn button {
+  font-size: 24px;
+  background-color: transparent;
+}
+.cart-size-select {
+  border: none;
+  padding-left: 10px;
+  padding-right: 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-right: 20px;
+}
+/* 주문결제 area */
+.order-area h4 {
+  margin-bottom: 24px;
+}
+.cart-product-acount, 
+.cart-product-delivery-acount, 
+.cart-product-total-acount {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-product-acount,
+.cart-product-delivery-acount {
+  margin-bottom: 8px;
+}
+.cart-product-total-acount {
+  padding: 16px 0;
+  border-top: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid rgb(229, 229, 229);
+  margin: 12px 0;
+}
+.cart-product-total-acount-number {
+  font-weight: 600;
+}
+.orderPayment-btn {
+  padding-top: 20px;
+}
+.orderPayment-btn button {
+  background: rgb(17, 17, 17);
+  color: #fff;
+  width: 100%;
+  border-radius: 30px;
+  padding: 18px 24px;
+  font-weight: 600;
+  transition: all 0.2s ease 0s;
+}
+.orderPayment-btn button:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+/* 상품 카드 스타일 */
+.sale-price-area {
+  display: flex;
+}
+.pre-price {
+  text-decoration: line-through;
+}
+/* footer */
+.footer {
+  height: 100%;
+}
+.footer-row {
+  padding: 40px;
+}
+.footer-left-area {
+  display: flex;
+}
+.footer-left-area ul {
+  padding-left: 0;
+  margin-right: 50px;
+}
+.footer-left-area ul li {
+  margin-bottom: 10px;
+}
+.footer-right-area {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-list {
+  color: #7e7e7e;
+  font-size: 12px;
+}
+.footer-title {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.footer-icon {
+  background: #7e7e7e;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  margin-left: 16px;
+}
+.footer-icon:hover {
+  background-color: #fff;
+}
+.modal-dialog {
+  margin-top: 200px !important;
+}
+.third-banner-img-container,
+.fourth-banner-img-container,
+.first-banner-img {
+  height: 950px;
+}
+/* 주문결제 모달창 close 버튼 */
+.btn-secondary {
+  color: #000 !important;
+  background: transparent !important;
+  border: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* 모바일 메뉴 웹에서는 안보이도록 설정함 */
+.mobile-menu-container {
+  display: none;
+}
+.web-bottom-product-menu {
+  display: block;
+}
+.mobile-bottom-menu-button-area {
+  display: none;
+}
+.mobile-footer-container {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* 미디어쿼리 */
+
+@media screen and (max-width: 767px) {
+  .player-wrapper {
+    margin-top: 60px;
   }
-  to {
-    transform: rotate(360deg);
+  .third-banner-img-container,
+  .fourth-banner-img-container,
+  .first-banner-img {
+    height: 400px;
+  }
+  .banner-img-first {
+    background-image: url('https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/58dc602c-7eda-46de-9c38-8ee838b7c096/image.jpg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .banner-img-second {
+    background-image: url('https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/47b050f8-4ccd-4087-b91e-055ec97eed6b/image.jpg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .banner-img-third {
+    background-image: url('https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/478b4b4c-ef88-4f0d-bb78-9535753e7d77/image.jpg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .third-banner-img {
+    background-image: url('https://static.nike.com/a/images/f_auto/dpr_4.0,cs_srgb/w_352,c_limit/bcb8003b-66b9-49a2-9019-0b2720a5c2e0/nike-just-do-it.jpg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .fourth-banner-img {
+    background-image: url('https://static.nike.com/a/images/f_auto/dpr_4.0,cs_srgb/w_312,c_limit/ae2d481b-1b77-431c-80e5-930bff54572e/nike-just-do-it.jpg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .banner-description {
+    margin-bottom: 84px;
+    margin-top: 24px;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+  .banner-description h1 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 900;
+  }
+  .trending-now-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-list-area {
+    display: none;
+  }
+  .search-area {
+    display: none;
+  }
+  .cart-area {
+    margin-right: 30px;
+  }
+  .navbar {
+    top: 0;
+  }
+  .navbar-toggler {
+    border: none !important;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+  .logo {
+    margin-left: 10px;
+  }
+  .productAllNavbar-btn-area {
+    display: none;
+  }
+  .card {
+    padding: 2px !important;
+  }
+  .trending-relative {
+    margin-bottom: 10px;
+  }
+  .detail-description-area {
+    padding: 20px;
+  }
+  .size-area {
+    padding: 20px;
+  }
+  .size {
+    margin-top: 0;
+  }
+  .detail-description {
+    padding: 20px;
+  }
+  .detail-right-area {
+    margin-top: 0 !important;
+  }
+  .mainContainer {
+    margin-top: 0;
+  }
+  .web-nav {
+    display: none !important;
+  }
+  /* product-all-page-col-css padding 재정의 해줌 */
+  .product-all-page-col-css {
+    padding: 0 !important;
+  }
+  .mobile-menu-area {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .mobile-menu-container {
+    display: block;
+  }
+  .mobile-menu-button-area {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .mobile-main-menu-btn {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+    background: transparent;
+  }
+  .mobile-sub-menu-area {
+    padding-left: 33px;
+    padding-top: 24px;
+  }
+  .mobile-menu-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-sub-menu-list {
+    font-size: 18px;
+    padding: 4px;
+    color: #757575;
+  }
+  .offcanvas-header {
+    padding-top: 24px !important;
+    padding-right: 30px !important;
+    justify-content: flex-end !important;
+  }
+  .btn-close {
+    z-index: 10001 !important;
+  }
+  .navbar {
+    z-index: 999 !important;
+  }
+  .svg-inline--fa {
+    margin-right: 10px;
+  }
+  .mainContainer {
+    margin-top: 58px;
+  }
+  .MobileNavbarToggleButtons-container {
+    display: flex;
+    align-items: center;
+  }
+  .MobileNavbarToggleButtons-container button {
+    color: #000;
+  }
+  .fa-magnifying-glass {
+    padding-right: 20px;
+  }
+  .cart-page-container {
+    padding: 20px !important;
+    padding-top: 10px !important;
+  }
+  .cart-title-price {
+    flex-direction: column;
+  }
+  /* cart 컴포넌트에서 모바일 화면이 되면 첫번째 이미지만 보이도록 설정하는 코드 */
+  .card.productDetailImage:not([data-img="0"]) {
+    /* 0 이외의 data-img 속성 값을 가지는 요소에 대해 스타일 적용 */
+    /* 예: data-img="1", data-img="2", ... */
+    display: none;
+  }
+  .cart-btn {
+    margin-top: 30px;
+  }
+  .fa-magnifying-glass {
+    padding-right: 0;
+  }
+  .offcanvas-title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .offcanvas-custom-body {
+    position: relative;
+  }
+  .offcanvas-menu-list-container {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding-top: 30px;
+  }
+  .offcanvas-menu-list-container p {
+    font-weight: 500;
+    color: #757575;
+  }
+  .offcanvas-menu-list-container li {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+  }
+  .mobile-search-input {
+    border-radius: 100px;
+    border: none;
+    background: #f5f5f5;
+    padding: 8px 12px 8px 44px;
+  }
+  .mobile-search-input:focus {
+    border: none;
+    outline: none;
+  }
+  .offcanvas-input-area {
+    position: relative;
+    padding-left: 10px;
+  }
+  .mobile-search-btn {
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    background: none;
+  }
+  .mobile-search-clear-btn {
+    transform: rotate(45deg);
+    background: none;
+    position: absolute;
+    top: 10px;
+    right: 4px;
+  }
+  .mobile-search-offcanvas-close-btn {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  .mobile-search-offcanvas-close-btn button {
+    background: none;
+  }
+  .detail-description-area {
+    padding: 20px 10px;
+  }
+  .web-bottom-product-menu {
+    display: none;
+  }
+  .mobile-bottom-menu-button-area {
+    display: block;
+    margin: 30px 0;
+  }
+  .mobile-bottom-menu-button-area li {
+    color: #757575;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .mobile-bottom-main-menu-btn {
+    padding: 10px;
+    background: none;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  .footer {
+    display: none;
+  }
+  .mobile-footer-container {
+    display: block;
+    background: #000;
+    color: #fff;
+  }
+  .mobile-news-area {
+    padding-left: 0;
+    padding: 20px 10px;
+    border-bottom: 1px solid #757575;
+  }
+  .mobile-news-area > li {
+    padding: 5px 0;
+  }
+  .mobile-footer-help-btn-area > button {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding: 10px;
+    color: #fff;
+    background: none;
+  }
+  .mobile-footer-help-btn-ChevronDownIcon {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #fff;
+  }
+  .mobile-footer-help-list ul {
+    padding-left: 10px;
+    border-bottom: 1px solid #757575;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .mobile-footer-help-list li {
+    color: #757575;
+    padding: 5px 0;
   }
 }
