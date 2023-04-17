@@ -32,7 +32,7 @@ const ProductAllPageProductCard = ({ item }) => {
 
   return (
     <div className='card' onClick={() => { handleClick(item) }}>
-      <img className='product-all-img-card' src={item?.imageAddress} alt="" />
+      <img className='product-all-img-card' src={item?.detailImageAddress[0]} alt="" />
       {item.bestseller === true ? <div>베스트셀러</div> : item.new === true ? <div>신상품</div>: ""}
       <div>{item.title}</div>
       <div>{item.content}</div>

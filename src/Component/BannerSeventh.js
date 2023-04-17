@@ -25,7 +25,6 @@ const BannerSeventh = () => {
     </div>
   ));
 
-
   return (
     <div>
       <div className='trending-now-title'>

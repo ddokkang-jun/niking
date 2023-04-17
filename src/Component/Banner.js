@@ -27,7 +27,6 @@ const Banner = () => {
         />
       </div> */}
 
-
       <Slideshow />
       <div className='banner-description'>
         <h1>모든 러닝을 위한 경쾌한 질주</h1>

@@ -142,7 +142,7 @@ export const productSlice = createSlice({
     },
     setProductAllData: (state, action) => {
       state.productAllData = action.payload;
-    }
+    },
   },
 });
 
