@@ -50,7 +50,7 @@ const ProductsDetails = () => {
               <p className='detatail-content'>{data.content}</p>
               <h5 className='detail-price'>{data.price / 1000},000원</h5>
             </div>
-            {data.productType === "shoes" ? <ShoesSizeButton data={data} /> : <ClothSizeButton data={data} />}
+            {data.productType === "신발" ? <ShoesSizeButton data={data} /> : <ClothSizeButton data={data} />}
             {data.eco === true ? <div className='eco-true-description'>{data.ecodescription}</div> : ""}
             <div className='detail-description'>{data.description}</div>
           </div>

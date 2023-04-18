@@ -799,9 +799,7 @@ button {
   display: none;
 }
 
-
 /* 미디어쿼리 */
-
 @media screen and (max-width: 767px) {
   .player-wrapper {
     margin-top: 60px;

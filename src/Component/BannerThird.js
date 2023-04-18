@@ -39,4 +39,4 @@ const BannerThird = () => {
   )
 }
 
-export default BannerThird
+export default BannerThird;

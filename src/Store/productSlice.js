@@ -23,6 +23,7 @@ const initialState = {
   searchInputValue: "",
   mobileOffcanvasIsClose: false, // 모바일에서 오프캔버스offcanvas 의 state
   productAllData: [], // Home 컴포넌트에서 db.json를 호출 받아오는 state
+  homePageCarousel: []
 };
 
 export const productSlice = createSlice({
@@ -143,8 +144,11 @@ export const productSlice = createSlice({
     setProductAllData: (state, action) => {
       state.productAllData = action.payload;
     },
+    setHomePageCarousel: (state, action) => {
+      state.homePageCarousel = action.payload;
+    },
   },
 });
 
-export const { setProducts, setSuggestShoes, setdetailPageTabValue, setFade, setSelectProductSize, setSizeSelectWarning, setMenShoes, setMenCloth, setWomenShoes, setWomenCloth, setKidsShoes, setKidsCloth, setMainNavbarMenuClicked, setProductSortWay, setProductAllPageNavbarTitle, setPromotionAirMax, setPromotionLeggings, setPromotionNewzins, setPromotionSportsBra, setTrendingWomenEssentialEdition, setFeaturedShoes, setProductAllPageClickedData, setSelectClothSize, setChoosedProductData, setDeleteData, setCountPlus, setChangeSize, setChangeCount, setSearchInputValue, setPegasus, setMobileOffcanvasIsClose, setProductAllData } = productSlice.actions;
+export const { setProducts, setSuggestShoes, setdetailPageTabValue, setFade, setSelectProductSize, setSizeSelectWarning, setMenShoes, setMenCloth, setWomenShoes, setWomenCloth, setKidsShoes, setKidsCloth, setMainNavbarMenuClicked, setProductSortWay, setProductAllPageNavbarTitle, setPromotionAirMax, setPromotionLeggings, setPromotionNewzins, setPromotionSportsBra, setTrendingWomenEssentialEdition, setFeaturedShoes, setProductAllPageClickedData, setSelectClothSize, setChoosedProductData, setDeleteData, setCountPlus, setChangeSize, setChangeCount, setSearchInputValue, setPegasus, setMobileOffcanvasIsClose, setProductAllData,setHomePageCarousel } = productSlice.actions;
 export default productSlice.reducer;

@@ -4,15 +4,13 @@ import React, { useEffect, useState } from 'react'
 import { Navbar, Offcanvas } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-
-
 // 모바일 search button 컴포넌트입니다.
 const MobileSearchButton = () => {
   let navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [noKeyword, setNoKeyword] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const popularKeyword = ["Air Force 1", "Jordan", "Air Max", "Blazer"];
+  const popularKeyword = ["에어 포스", "조던", "에어맥스", "레깅스"];
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

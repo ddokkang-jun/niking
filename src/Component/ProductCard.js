@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setProductAllPageClickedData } from '../Store/productSlice.js';
 import { setSelectProductSize,setSizeSelectWarning } from "../Store/productSlice";
@@ -8,6 +8,7 @@ import { setSelectProductSize,setSizeSelectWarning } from "../Store/productSlice
 const ProductCard = ({ item }) => {
   let dispatch = useDispatch();
   let navigate = useNavigate();
+
 
   const showProductDetail = (item) => {
     window.scroll(0,0);
@@ -23,7 +24,7 @@ const ProductCard = ({ item }) => {
 
   return (
     <div className='card' onClick={() => showProductDetail(item)}>
-      {/* <Card.Img
+      <Card.Img
         variant='top'
         src={item.imageAddress}
       />
@@ -33,7 +34,7 @@ const ProductCard = ({ item }) => {
           <h6 className='item-content'>{item.content}</h6>
           <h6>{item.price / 1000},000원</h6>
         </div>
-      </Card.Body> */}
+      </Card.Body>
     </div>
   );
 };

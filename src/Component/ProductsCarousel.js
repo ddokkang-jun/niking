@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from './ProductCard';
+import { setHomePageCarousel } from '../Store/productSlice';
 
 const ProductsCarousel = () => {
   let productAllData = useSelector((state) => state.product.productAllData);
-
+  let homePageCarousel = useSelector((state) => state.product.homePageCarousel);
+  const array = [358, 359, 360, 363, 364, 365]; // 캐러셀에서 보여질 상품들 data id
+  let dispatch = useDispatch();
+  
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -27,30 +31,25 @@ const ProductsCarousel = () => {
     },
   };
 
-  function getRandomObjectsFromArray(array, num) {
-  const arrayLength = array.length;
-  
-  // 랜덤한 인덱스를 생성하는 함수
-  const getRandomIndex = () => Math.floor(Math.random() * arrayLength);
-  
-  // 배열을 num 개수만큼 랜덤하게 샘플링하여 새로운 배열을 만듭니다.
-  const resultArray = Array(num).fill().map(() => array[getRandomIndex()]);
-  
-  return resultArray;
-}
+  const getCarouselItem = (data) => {
+    console.log("오류남?");
+    // console.log(data);
+    // let result = data.filter((item) => array.includes(item.id));
+    //   dispatch(setHomePageCarousel(result));
+  };
 
   useEffect(() => {
+    getCarouselItem(productAllData);
+    
+  }, [productAllData]); 
 
-  },[]);
-  
   return (
     <div>
       <div className='headline-featured-shoes'><h3>Featured Shoes</h3></div>
-      {/* <Carousel responsive={responsive} infinite={true} autoPlay={true}>
-        {randomProducts.map((item, i) => <ProductCard item={item} key={i} /> )}
-      </Carousel> */}
+      <Carousel responsive={responsive} infinite={true} autoPlay={true}>
+        {homePageCarousel.map((item, i) => <ProductCard item={item} key={i} /> )}
+      </Carousel>
     </div>
-    
   );
 };
 

@@ -13,17 +13,15 @@ function App() {
   let dispatch = useDispatch();
   let productAllData = useSelector((state) => state.product.productAllData);
 
-  
   // json-server --watch db.json --port 5000
   useEffect(() => {
     const getData = async () => {
       // let url = "http://localhost:5000/products";
-      // let url = "http://localhost:5000/dummy";
-      let url = "https://my-json-server.typicode.com/ddokkang-jun/niking/products";
       // let url = "https://storage.googleapis.com/my-nike-project-video-data/db.json";
+      let url = "https://my-json-server.typicode.com/ddokkang-jun/niking/products";
       let response = await fetch(url);
       let data = await response.json();
-      // console.log(data);
+      console.log(data);
       dispatch(setProductAllData(data));
     };
     getData();
@@ -56,3 +54,8 @@ export default App;
 // npm install --save @fortawesome/react-fontawesome
 // npm install --save @fortawesome/free-brands-svg-icons
 // npm install -g json-server
+// npm install react-multi-carousel --save
+
+
+// 배포하기
+// git push
