@@ -14,7 +14,7 @@ const Banner = () => {
 
   return (
     <>
-      {/* <div className='player-wrapper'>
+      <div className='player-wrapper'>
         <ReactPlayer
           className='react-player'
           url='https://storage.googleapis.com/my-nike-project-video-data/Q4-HOMEPG_loop_041023.mp4'
@@ -25,9 +25,9 @@ const Banner = () => {
           controls={true}
           loop={true}
         />
-      </div> */}
+      </div>
 
-      <Slideshow />
+      {/* <Slideshow /> */}
       <div className='banner-description'>
         <h1>모든 러닝을 위한 경쾌한 질주</h1>
         <div className='banner-p'>

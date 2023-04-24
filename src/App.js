@@ -21,7 +21,6 @@ function App() {
       let url = "https://my-json-server.typicode.com/ddokkang-jun/niking/products";
       let response = await fetch(url);
       let data = await response.json();
-      console.log(data);
       dispatch(setProductAllData(data));
     };
     getData();
@@ -55,7 +54,3 @@ export default App;
 // npm install --save @fortawesome/free-brands-svg-icons
 // npm install -g json-server
 // npm install react-multi-carousel --save
-
-
-// 배포하기
-// git push
