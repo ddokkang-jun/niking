@@ -68,15 +68,14 @@ const ProductAll = ({ data }) => {
   // 필터링 할게 2개인 경우
   const doubleValueFilter = (data, value1, value2) => {
     let result = data.filter((item) => {
-      return item.gender === value1 && item.type.includes(value2);
+      return item.gender === value1 && item.productType === value2;
     });
-
+    
     if (result.length === 0) {
       result = data.filter((item) => {
-        return item.gender === value1 && item.productType === value2;
+        return item.gender === value1 && item.type.includes(value2);
       });
     }
-
     return result;
   };
 
@@ -104,6 +103,7 @@ const ProductAll = ({ data }) => {
   // 상품 필터링
   useEffect(() => {
     let result = filterData(copyData, firstValue, secondValue);
+    // console.log("result:", result);
     setShowData(result);
     setCount(result.length);
 
@@ -136,15 +136,15 @@ const ProductAll = ({ data }) => {
 
 
   return (
-    <div className={`product-all-main-container fadeStart ` + fade}>
-      <ProductAllNavbar firstValue={firstValue} secondValue={secondValue} count={count} />
+    <div className={ `product-all-main-container fadeStart ` + fade }>
+      <ProductAllNavbar firstValue={ firstValue } secondValue={ secondValue } count={ count } />
       <div className='container product-all-container'>
         <Row>
-          {showData.map((item, index) => (
-            <Col md={4} xs={6} key={index} className='product-all-page-col-css'>
-              <ProductAllPageProductCard item={item} />
+          { showData.map((item, index) => (
+            <Col md={ 4 } xs={ 6 } key={ index } className='product-all-page-col-css'>
+              <ProductAllPageProductCard item={ item } />
             </Col>
-          ))}
+          )) }
         </Row>
       </div>
     </div>

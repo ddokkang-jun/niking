@@ -10,7 +10,7 @@ const ProductsCarousel = () => {
   let homePageCarousel = useSelector((state) => state.product.homePageCarousel);
   const array = [358, 359, 360, 363, 364, 365]; // 캐러셀에서 보여질 상품들 data id
   let dispatch = useDispatch();
-  
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -32,22 +32,25 @@ const ProductsCarousel = () => {
   };
 
   const getCarouselItem = (data) => {
-    console.log("오류남?");
+    // console.log("오류남?");
     // console.log(data);
+
+    dispatch(setHomePageCarousel(data));
+
     // let result = data.filter((item) => array.includes(item.id));
-    //   dispatch(setHomePageCarousel(result));
+    // dispatch(setHomePageCarousel(result));
   };
 
   useEffect(() => {
     getCarouselItem(productAllData);
-    
-  }, [productAllData]); 
+
+  }, [productAllData]);
 
   return (
     <div>
       <div className='headline-featured-shoes'><h3>Featured Shoes</h3></div>
-      <Carousel responsive={responsive} infinite={true} autoPlay={true}>
-        {homePageCarousel.map((item, i) => <ProductCard item={item} key={i} /> )}
+      <Carousel responsive={ responsive } infinite={ true } autoPlay={ true }>
+        { homePageCarousel.map((item, i) => <ProductCard item={ item } key={ i } />) }
       </Carousel>
     </div>
   );

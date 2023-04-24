@@ -24,10 +24,10 @@ const ProductCard = ({ item }) => {
 
   return (
     <div className='card' onClick={() => showProductDetail(item)}>
-      {/* <Card.Img
+      <Card.Img
         variant='top'
         src={item.imageAddress}
-      /> */}
+      />
       <Card.Body>
         <div>
           <h6>{item.title}</h6>

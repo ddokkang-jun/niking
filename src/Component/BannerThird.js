@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactPlayer from 'react-player';
 import { useNavigate } from 'react-router-dom';
 
 const BannerThird = () => {
@@ -10,7 +11,7 @@ const BannerThird = () => {
 
   return (
     <div className='card'>
-      <div className="container third-banner-img-container">
+      {/* <div className="container third-banner-img-container">
         <div
           className='third-banner-img'
           onClick={handleClick}
@@ -23,7 +24,20 @@ const BannerThird = () => {
             height: "100%",
           }}
         ></div>
+      </div> */}
+      <div className='player-wrapper'>
+        <ReactPlayer
+          className='react-player'
+          url='https://storage.googleapis.com/my-nike-project-video-data/Q4-HOMEPG_loop_041023.mp4'
+          width='100%'
+          height='100%'
+          playing={ true } // 자동재생
+          muted={ true }  // 자동재생
+          controls={ true }
+          loop={ true }
+        />
       </div>
+      
       <div className='banner-description'>
         <h1>에어맥스 펄스</h1>
         <div className='banner-p'>

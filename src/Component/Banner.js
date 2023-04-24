@@ -17,7 +17,7 @@ const Banner = () => {
       <div className='player-wrapper'>
         <ReactPlayer
           className='react-player'
-          url='https://storage.googleapis.com/my-nike-project-video-data/Q4-HOMEPG_loop_041023.mp4'
+          url='https://storage.googleapis.com/my-nike-project-video-data/LeBron-20-Spin_1.mp4'
           width='100%'
           height='100%'
           playing={true} // 자동재생

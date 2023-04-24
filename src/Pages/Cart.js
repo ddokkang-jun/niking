@@ -106,7 +106,7 @@ const Cart = () => {
                             <div className='cart-size-area'>
                               <label className='cart-size-label'>사이즈</label>
                               <select id="cart-size" className="cart-size-select" value={item.size} onChange={(e) => { handleSelectSizeChange(e, item) }}>
-                                {item.data.productType === "shoes" && shoesSize.map((size) => (
+                                {item.data.productType === "신발" && shoesSize.map((size) => (
                                   <option key={size} value={size}>{size}</option>
                                 ))}
                                 {item.data.productType === "cloth" && item.data.gender === "men" ? menClothSize.map((size) => (

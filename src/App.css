@@ -840,7 +840,7 @@ button {
     background-position: center;
   }
   .banner-description {
-    margin-bottom: 84px;
+    margin-bottom: 0;
     margin-top: 24px;
     margin-left: 0;
     padding: 0 20px;
@@ -1105,5 +1105,8 @@ button {
   .mobile-footer-help-list li {
     color: #757575;
     padding: 5px 0;
+  }
+  .trending-now-title {
+    margin-top: 30px;
   }
 }
