@@ -9,10 +9,6 @@ import { setProductAllData } from "./Store/productSlice";
 import ProductAll from './Pages/ProductAll';
 import ProductsDetails from './Pages/ProductsDetails';
 
-// 현재 다 잘 돌아가고 있음.
-// 수정 할 사항 :
-// 동영상 3개로 하기(2개 더 추가)
-
 function App() {
   let dispatch = useDispatch();
   let productAllData = useSelector((state) => state.product.productAllData);
