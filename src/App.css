@@ -723,11 +723,21 @@ button {
   background: rgba(0, 0, 0, 0.75);
 }
 /* 상품 카드 스타일 */
+.product-red-title {
+  color: crimson;
+}
+.product-content {
+  color: #757575;
+}
 .sale-price-area {
   display: flex;
 }
 .pre-price {
   text-decoration: line-through;
+  color: #757575;
+}
+.sale-price {
+  color: rgb(65, 161, 57);
 }
 /* footer */
 .footer {

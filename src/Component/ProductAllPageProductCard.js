@@ -33,16 +33,16 @@ const ProductAllPageProductCard = ({ item }) => {
   return (
     <div className='card' onClick={() => { handleClick(item) }}>
       <img className='product-all-img-card' src={item?.imageAddress} alt="" />
-      {item.bestseller === true ? <div>베스트셀러</div> : item.new === true ? <div>신상품</div>: ""}
+      { item.bestseller === true ? <div className='product-red-title'>베스트셀러</div> : item.new === true ? <div className='product-red-title'>신상품</div>: ""}
       <div>{item.title}</div>
-      <div>{item.content}</div>
+      <div className='product-content'>{item.content}</div>
       {item.sale === true ?
         <div className='sale-area'>
           <div className='sale-price-area'>
             <div className='sale-applied-price'>{ salePrice.toLocaleString() } 원</div>
             <div className='pre-price'>{item.price.toLocaleString() } 원</div>
           </div>
-          <div>{item.salepercent}% 할인</div>
+          <div className='sale-price'>{item.salepercent}% 할인</div>
         </div>
         :
         <div>{item.price.toLocaleString()} 원</div>}
